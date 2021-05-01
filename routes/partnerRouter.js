@@ -94,7 +94,8 @@ partnerRouter
         .catch((err) => next(err));
     }
   )
-  .delete(cors.corsWithOptions, 
+  .delete(
+    cors.corsWithOptions, 
     authenticate.verifyUser,
     authenticate.verifyAdmin, 
     (req, res, next) => {
